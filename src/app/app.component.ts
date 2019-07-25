@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GutierrezAngularClass';
+  componentVisible:boolean;
+  
+  constructor(){
+    this.componentVisible = true;
+  }
+
+  showComponent() {
+    this.componentVisible = !this.componentVisible;
+  }
+
 }

@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './shared/components/first/first.component';
 import { FirstService } from './services/first.service';
 import { FirstDirective } from './shared/directives/first.directive';
+import { EasterComponent } from './shared/components/easter/easter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    FirstDirective
+    FirstDirective,
+    EasterComponent
   ],
   imports: [
     BrowserModule,

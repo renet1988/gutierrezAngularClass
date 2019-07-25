@@ -5,14 +5,18 @@
         <button (click)="showButton()">Show Button</button>
         <button (click)="showImage()">Show Image</button>
     </div>
-    <div appFirst>
-        <div *ngIf="messageVisible">
+    <div>
+        <div *ngIf="messageVisible" appFirst>
             <h4>{{quote}}</h4>
         </div>
         <span>{{autor}}</span>
         <br>
     </div>
     <div *ngIf="imageVisible">
-        <img src="../../../../assets/imagenes/image.jpg" alt="">
+        <img src="../../../../assets/imagenes/image.jpg" usemap="#image-map" alt="Rene Laren Gutierrez Rodriguez">
     </div>
 </div>
+
+<map name="image-map">
+    <area target="" alt="" title="" href="http://localhost:4200/easter" coords="287,150,292,154" shape="rect">
+</map>
