@@ -10,9 +10,13 @@ export class FirstComponent implements OnInit {
 
   quote: string = '';
   autor: string = '';
-  permalink: string = '';
+  messageVisible: boolean;
+  buttonVisible: boolean;
 
-  constructor(private firstService: FirstService) { }
+  constructor(private firstService: FirstService) {
+    this.messageVisible = true;
+    this.buttonVisible = true;
+   }
 
   ngOnInit() {
   }
@@ -22,9 +26,16 @@ export class FirstComponent implements OnInit {
       .subscribe(data => {
         this.quote = data.quote;
         this.autor = data.author;
-        this.permalink = data.permalink;
         return data;
       })
+  }
+
+  showMessage() {
+    this.messageVisible = !this.messageVisible;
+  }
+
+  showButton() {
+    this.buttonVisible = !this.buttonVisible
   }
 
 }

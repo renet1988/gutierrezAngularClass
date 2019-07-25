@@ -1,7 +1,14 @@
-<div appFirst>
-    <h4>{{quote}}</h4>
-    <span>{{autor}}</span>
-    <br>
-    <br>
-    <button (click)="getQuotes()">Ramdom Message</button>
+<div>
+    <div id="buttons">
+        <button (click)="getQuotes()">Ramdom Message</button>
+        <button *ngIf="buttonVisible" (click)="showMessage()">Show Message</button>
+        <button (click)="showButton()">Show Button</button>
+    </div>
+    <div appFirst>
+        <div *ngIf="messageVisible">
+            <h4>{{quote}}</h4>
+        </div>
+        <span>{{autor}}</span>
+        <br>
+    </div>
 </div>
