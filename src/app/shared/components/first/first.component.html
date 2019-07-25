@@ -3,6 +3,7 @@
         <button (click)="getQuotes()">Ramdom Message</button>
         <button *ngIf="buttonVisible" (click)="showMessage()">Show Message</button>
         <button (click)="showButton()">Show Button</button>
+        <button (click)="showImage()">Show Image</button>
     </div>
     <div appFirst>
         <div *ngIf="messageVisible">
@@ -10,5 +11,8 @@
         </div>
         <span>{{autor}}</span>
         <br>
+    </div>
+    <div *ngIf="imageVisible">
+        <img src="../../../../assets/imagenes/image.jpg" alt="">
     </div>
 </div>

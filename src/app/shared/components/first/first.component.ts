@@ -12,10 +12,12 @@ export class FirstComponent implements OnInit {
   autor: string = '';
   messageVisible: boolean;
   buttonVisible: boolean;
+  imageVisible: boolean;
 
   constructor(private firstService: FirstService) {
     this.messageVisible = true;
     this.buttonVisible = true;
+    this.imageVisible = true;
    }
 
   ngOnInit() {
@@ -35,7 +37,11 @@ export class FirstComponent implements OnInit {
   }
 
   showButton() {
-    this.buttonVisible = !this.buttonVisible
+    this.buttonVisible = !this.buttonVisible;
+  }
+
+  showImage() {
+    this.imageVisible = !this.imageVisible;
   }
 
 }
